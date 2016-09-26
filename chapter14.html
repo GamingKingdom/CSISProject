@@ -1,4 +1,17 @@
-<form action="http://www.markmurtha.com/csis128/readform.asp" method="post">
+<html>
+<head>
+<script>
+function validateForm() {
+    var x = document.forms["form"].value;
+    if (x == null || x == "") {
+        alert("Form must be filled out");
+        return false;
+    }
+}
+</script>
+</head>
+  <body>
+<form name="form" action="http://www.markmurtha.com/csis128/readform.asp" method="post">
   Name: <input type="text" required oninvalid="this.setCustomValidity('Please enter a valid name')"
                placeholder="Enter your name">
   <br>
@@ -7,3 +20,5 @@
                          pattern="^[a-zA-Z0-9.!#$%’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
   <input type="submit" value="Sign Up Now">
 </form>
+  </body>
+  </html>
