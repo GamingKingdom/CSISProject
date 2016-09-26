@@ -1,6 +1,8 @@
 <form action="http://www.markmurtha.com/csis128/readform.asp" method="post">
   Name: <input type="text" oninvalid="this.setCustomValidity('Please enter a valid name')">
   <br>
-  E-Mail Address: <input type="text" required placeholder="Enter a valid email address" oninvalid="this.setCustomValidity('Please enter a valid email')">
+  E-Mail Address: <input type="text" required placeholder="Enter a valid email address" 
+                         oninvalid="this.setCustomValidity('Please enter a valid email')"
+                         pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
   <input type="submit" value="Sign Up Now">
 </form>
