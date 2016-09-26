@@ -2,8 +2,9 @@
 <head>
 <script>
 function validateForm() {
-    var x = document.forms["form"].value;
-    if (x == null || x == "") {
+    var x = document.forms["form"]["fName"].value;
+    var y = document.forms["form"]["fMail"].value;
+    if (x == null || x == "" || y == null || y == "") {
         alert("Form must be filled out");
         return false;
     }
@@ -12,10 +13,10 @@ function validateForm() {
 </head>
   <body>
 <form name="form" action="http://www.markmurtha.com/csis128/readform.asp" method="post">
-  Name: <input type="text" required oninvalid="this.setCustomValidity('Please enter a valid name')"
+  Name: <input name="fName" type="text" required oninvalid="this.setCustomValidity('Please enter a valid name')"
                placeholder="Enter your name">
   <br>
-  E-Mail Address: <input type="text" required placeholder="Enter a valid email address" 
+  E-Mail Address: <input name="fMail" type="text" required placeholder="Enter a valid email address" 
                          oninvalid="this.setCustomValidity('Please enter a valid email')"
                          pattern="^[a-zA-Z0-9.!#$%’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
   <input type="submit" value="Sign Up Now">
