@@ -1,6 +1,6 @@
 <form action="http://www.markmurtha.com/csis128/readform.asp">
-  Name: <input type="text" required>
+  Name: <input type="text" required oninvalid="this.setCustomValidity('Please enter a valid name')">
   <br>
-  E-Mail Address: <input type="text" required placeholder="Enter a valid email address">
+  E-Mail Address: <input type="text" required placeholder="Enter a valid email address" oninvalid="this.setCustomValidity('Please enter a valid email')">
   <input type="submit" value="Sign Up Now">
 </form>
